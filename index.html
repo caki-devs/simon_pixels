@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Simon_Pixels">
+    <meta name="keywords" content="Simon_Pixels, Photographers, Kenya, Photography, Studio, Studio in">
+    <meta name="author" content="Claudia Njeri">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title> Simon_Pixels</title>
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="favicon.ico">
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+
+    <div class="body-container container-fluid">
+        <a class="menu-btn" href="javascript:void(0)">
+            <i class="ion ion-grid"></i>
+        </a>
+        <div class="row justify-content-center">
+            <!--=================== side menu ====================-->
+            <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+                <!--logo -->
+                <div class="container" style="height:10%;">
+                    <div class="glitch" data-text="Simon_Pixels">Simon_Pixels</div>
+                </div>
+                <!--logo end-->
+
+                <!--main menu -->
+                <div class="side_menu_section">
+                    <ul class="menu_nav">
+                        <li class="active">
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">
+                                Portfolio
+                            </a>
+                        </li>
+                       
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--main menu end -->
+
+                <!--social and copyright -->
+                <div class="side_menu_bottom">
+                    <div class="side_menu_bottom_inner">
+                        <ul class="social_menu">
+                            <li>
+                                <a href="https://www.instagram.com/simon_gm_/">
+                                    <i class="ion ion-social-instagram"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <div class="copy_right">
+                            <p class="copyright">Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This was created by
+                                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                                <a href=" " target="_blank">MY LINK!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--social and copyright end -->
+
+            </div>
+            <!--=================== side menu end====================-->
+
+            <!--=================== content body ====================-->
+            <div class="col-lg-10 col-md-10 col-10  landing" >
+
+                <div class="quotes" style="position: left; width: 60%; margin-top: 0%; margin-left:0;">
+
+                    <blockquote aria-hidden="true">
+                        <hr>
+                        <q class="q" style="color:rgb(17, 15, 15);">
+                            Photographers are like wine.If you can't taste the difference then hire the cheaper one, but then next day, don't complain
+                            about the headache.</q>
+                        <footer>~ Francisco Romero</footer>
+                        <hr>
+                    </blockquote style="color:black;">
+                </div>
+            </div>
+            <!--=================== masaonry portfolio end====================-->
+        </div>
+
+    </div>
+
+    <!--=================== content body end ====================-->
+
+
+
+    <!-- jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <!--slick carousel -->
+    <script src="assets/js/slick.min.js"></script>
+    <!--Portfolio Filter-->
+    <script src="assets/js/imgloaded.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <!-- Magnific-popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--Counter-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- WOW JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Custom js -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+
+        function splitWords() {
+            let quote = document.querySelector("blockquote q");
+            quote.innerText.replace(/(<([^>]+)>)/ig, "");
+            quotewords = quote.innerText.split(" "),
+                wordCount = quotewords.length;
+            quote.innerHTML = "";
+            for (let i = 0; i < wordCount; i++) {
+                quote.innerHTML += "<span>" + quotewords[i] + "</span>";
+                if (i < quotewords.length - 1) {
+                    quote.innerHTML += " ";
+                }
+            }
+            quotewords = document.querySelectorAll("blockquote q span");
+            fadeWords(quotewords);
+        }
+
+        function getRandom(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function fadeWords(quotewords) {
+            Array.prototype.forEach.call(quotewords, function (word) {
+                let animate = word.animate([{
+                    opacity: 0,
+                    filter: "blur(" + getRandom(2, 5) + "px)"
+                }, {
+                    opacity: 1,
+                    filter: "blur(0px)"
+                }], {
+                    duration: 1000,
+                    delay: getRandom(500, 3300),
+                    fill: 'forwards'
+                })
+            })
+        }
+
+
+        splitWords();
+    </script>
+
+</body>
+<style>
+</style>
+
+</html>
